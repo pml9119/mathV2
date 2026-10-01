@@ -1,0 +1,29 @@
+{
+  "name": "math-ppt",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI 数学教学课件：AI 生成 → Web 全功能编辑 → 互动层 → 零依赖播放",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w packages/math",
+    "test": "npm run test -w packages/math",
+    "demo": "npm run demo -w packages/math",
+    "verify": "node tools/verify.mjs",
+    "verify:fast": "node tools/verify.mjs --fast",
+    "verify:negtest": "node tools/verify-negtest.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.0",
+    "typescript": "^5.9.3"
+  },
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

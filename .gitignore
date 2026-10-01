@@ -1,0 +1,15 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# CDP 调试浏览器 profile —— 必须用临时 user-data-dir，
+# 否则会在工程目录里堆出 .edge_* / profile 缓存（曾堆出 200MB+）。见 AGENTS.md §4.3
+.edge_*/
+.chrome-*/
+.cdp-*/
+
+# 编辑器 / 系统垃圾
+.DS_Store
+Thumbs.db
+*.log
+

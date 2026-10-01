@@ -1,0 +1,12 @@
+# 闸门（tools/verify.mjs）对产物做逐字节比对：inject-idempotent / artifact-freshness /
+# embed-freshness 都基于 sha256。生成器写出的是 LF，若 Windows 克隆时被自动转成 CRLF，
+# 这些检查会在全新克隆上误报。因此统一强制 LF，保持跨平台字节一致。
+* text=auto eol=lf
+
+# 二进制：禁止任何行尾 / 编码转换
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.ico  binary

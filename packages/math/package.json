@@ -1,0 +1,22 @@
+{
+  "name": "@mathppt/math",
+  "version": "0.1.0",
+  "description": "数学可视化引擎：表达式/坐标系/函数绘图/几何/3D/统计",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test tests/expr.test.mjs tests/plot.test.mjs tests/geo.test.mjs tests/implicit.test.mjs tests/geo3d.test.mjs tests/stats.test.mjs tests/lecture.test.mjs",
+    "demo": "node dist/demo/smoke.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0"
+  }
+}
